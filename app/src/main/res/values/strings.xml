@@ -5,6 +5,9 @@
 
     <string name="lafh_splash_title">super dumdum title</string>
     <string name="lafh_splash_subtitle">a dumdum app to let you do dumdum stuff ;)</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lafh_shutup_warnings">ffs fk off with the fkn warnings this rotten potato of an IDE</string>
+    <string name="lafh_onboarding_description_1">this heavenly artifact of an app allows u to do sum serious dumdum shit</string>
+    <string name="lafh_onboarding_description_2">in addition to that, u can also achieve some other dumdum shit</string>
+    <string name="lafh_onboarding_description_3">even better, ultra dumdum shits are no longer novel with this magnificent mfkn app</string>
+    <string name="lafh_button_text">super dumdum</string>
 </resources>
