@@ -2,4 +2,9 @@
     <string name="app_name">Lafh</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="lafh_splash_title">super dumdum title</string>
+    <string name="lafh_splash_subtitle">a dumdum app to let you do dumdum stuff ;)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
