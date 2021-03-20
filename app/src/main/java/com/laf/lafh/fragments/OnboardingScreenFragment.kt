@@ -8,12 +8,17 @@ import android.view.ViewGroup
 import com.laf.lafh.databinding.FragmentOnboardingScreenBinding
 import com.laf.lafh.models.OnboardingModel
 
-class OnboardingScreenFragment(private val model: OnboardingModel) : Fragment() {
+class OnboardingScreenFragment() : Fragment() {
 
     private lateinit var binding: FragmentOnboardingScreenBinding
+    private lateinit var model: OnboardingModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val descText = arguments?.getString(ARGS_KEY_DESC_TEXT) ?: "Error"
+        val buttonText = arguments?.getString(ARGS_KEY_BUTTON_TEXT) ?: "Error"
+        model = OnboardingModel(descText, buttonText)
     }
 
     override fun onCreateView(
@@ -29,5 +34,20 @@ class OnboardingScreenFragment(private val model: OnboardingModel) : Fragment() 
         super.onViewCreated(view, savedInstanceState)
         binding.onboardingButton.text = model.buttonText
         binding.onboardingDescriptionTextView.text = model.descriptionText
+    }
+
+    companion object {
+        const val ARGS_KEY_BUTTON_TEXT = "buttonText"
+        const val ARGS_KEY_DESC_TEXT = "descriptionText"
+
+        fun createInstance(onboardingModel: OnboardingModel): OnboardingScreenFragment {
+            val screenFragment = OnboardingScreenFragment()
+            val bundle = Bundle()
+            bundle.putString(ARGS_KEY_BUTTON_TEXT, onboardingModel.buttonText)
+            bundle.putString(ARGS_KEY_DESC_TEXT, onboardingModel.descriptionText)
+
+            screenFragment.arguments = bundle
+            return screenFragment
+        }
     }
 }
