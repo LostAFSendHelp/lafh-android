@@ -5,13 +5,15 @@ import com.laf.lafh.R
 import com.laf.lafh.models.OnboardingModel
 
 interface OnboardingRepositoryExpected {
-    val onboardingModels: ArrayList<OnboardingModel>
+    fun getAllModels(): ArrayList<OnboardingModel>
 }
 
-class OnboardingRepository(val context: Context) : OnboardingRepositoryExpected {
-    override val onboardingModels: ArrayList<OnboardingModel> = arrayListOf(
-        OnboardingModel(context.getString(R.string.lafh_onboarding_description_1), context.getString(R.string.lafh_button_text)),
-        OnboardingModel(context.getString(R.string.lafh_onboarding_description_2), context.getString(R.string.lafh_button_text)),
-        OnboardingModel(context.getString(R.string.lafh_onboarding_description_3), context.getString(R.string.lafh_button_text))
-    )
+class OnboardingRepository(private val context: Context) : OnboardingRepositoryExpected {
+    override fun getAllModels(): ArrayList<OnboardingModel> {
+        return arrayListOf(
+            OnboardingModel(context.getString(R.string.lafh_onboarding_description_1), context.getString(R.string.lafh_button_text)),
+            OnboardingModel(context.getString(R.string.lafh_onboarding_description_2), context.getString(R.string.lafh_button_text)),
+            OnboardingModel(context.getString(R.string.lafh_onboarding_description_3), context.getString(R.string.lafh_button_text))
+        )
+    }
 }

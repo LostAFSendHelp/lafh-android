@@ -12,6 +12,6 @@ class OnboardingAdapter(activity: AppCompatActivity, private val models: ArrayLi
     }
 
     override fun createFragment(position: Int): Fragment {
-        return OnboardingScreenFragment.createInstance(models[position])
+        return OnboardingScreenFragment.newInstance(models[position])
     }
 }

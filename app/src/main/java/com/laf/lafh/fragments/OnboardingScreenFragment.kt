@@ -50,8 +50,8 @@ class OnboardingScreenFragment : Fragment() {
         const val ARGS_KEY_BUTTON_TEXT = "buttonText"
         const val ARGS_KEY_DESC_TEXT = "descriptionText"
 
-        fun createInstance(onboardingModel: OnboardingModel): OnboardingScreenFragment {
-            LafStdLog.debugFuncCalled(this, this::createInstance.name)
+        fun newInstance(onboardingModel: OnboardingModel): OnboardingScreenFragment {
+            LafStdLog.debugFuncCalled(this, this::newInstance.name)
 
             val screenFragment = OnboardingScreenFragment()
             val bundle = Bundle()
